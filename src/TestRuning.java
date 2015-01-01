@@ -3,8 +3,7 @@ public class TestRuning {
 
 	public static void main(String[] args) {
 		try {
-			TestCaseTest test=new TestCaseTest();
-			test.testRunning();
+			new TestCaseTest("testRunning").run();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
