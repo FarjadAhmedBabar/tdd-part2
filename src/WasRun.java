@@ -1,7 +1,7 @@
 import java.lang.reflect.Method;
 
 public class WasRun extends TestCase{
-	private boolean wasRun;
+	public boolean wasRun;
 	
 
 	public WasRun(String name)
@@ -22,16 +22,4 @@ public class WasRun extends TestCase{
 			e.printStackTrace();
 		}
 	}
-
-	/*public static void main(String[] args) {
-		try {
-			WasRun test = new WasRun("testMethod");
-			 assert !test.wasRun;
-			test.run();
-			assert test.wasRun;
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-	}*/
 }
