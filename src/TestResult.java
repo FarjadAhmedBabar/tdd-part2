@@ -1,8 +1,12 @@
-
 public class TestResult {
+	int runCount = 0;
+
+	public void testStarted() {
+		this.runCount = this.runCount + 1;
+	}
 
 	public String summary() {
-		return "1 run, 0 failed";
+		return runCount + " run, 0 failed";
 	}
 
 }

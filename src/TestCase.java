@@ -8,7 +8,9 @@ public class TestCase {
 	}
 
 	public TestResult run() throws Exception {
+		TestResult result = new TestResult();
 		try {
+			result.testStarted();
 			setUp();
 			Method method = this.getClass().getMethod(name, null);
 			method.invoke(this, null);
@@ -16,11 +18,13 @@ public class TestCase {
 		} catch (Exception e) {
 			throw e;
 		}
-		return new TestResult();
-	}
-	public void tearDown() {
-		
+		return result;
 	}
 
-	public void setUp(){}
+	public void tearDown() {
+
+	}
+
+	public void setUp() {
+	}
 }

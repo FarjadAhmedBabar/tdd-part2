@@ -22,4 +22,9 @@ public class TestCaseTest extends TestCase {
 		TestResult result= test.run();
 		assert ("1 run, 0 failed".equalsIgnoreCase(result.summary()));
 	}
+	public void testFailedResult() throws Exception{
+		WasRun test=new WasRun("testBrokenMethod");
+		TestResult result= test.run();
+		assert("1 run, 1 failed".equalsIgnoreCase(result.summary()));
+	}
 }
