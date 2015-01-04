@@ -7,18 +7,17 @@ public class TestCase {
 		this.name = name;
 	}
 
-	public TestResult run() throws Exception {
-		TestResult result = new TestResult();
+	public void run(TestResult result)  {
+		setUp();
+		result.testStarted();
 		try {
-			result.testStarted();
-			setUp();
 			Method method = this.getClass().getMethod(name, null);
 			method.invoke(this, null);
-			tearDown();
 		} catch (Exception e) {
-			throw e;
+			result.testFailed();
+		} finally {
+			tearDown();
 		}
-		return result;
 	}
 
 	public void tearDown() {
