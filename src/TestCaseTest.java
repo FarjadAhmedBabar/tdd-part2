@@ -11,8 +11,15 @@ public class TestCaseTest extends TestCase {
 	}
 
 	public void testSetUp() throws Exception {
-		test.run();
-		assert test.wasSetUp;
+		try 
+		{
+			test.run();
+			assert "setUp testMethod ".equals(this.test.log);
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+			throw e;
+		}
 	}
 
 	public void setUp() {
