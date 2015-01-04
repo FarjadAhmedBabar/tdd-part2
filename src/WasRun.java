@@ -2,7 +2,6 @@
 
 public class WasRun extends TestCase {
 	public boolean wasRun;
-	public boolean wasSetUp;
 	public String log;
 
 	public WasRun(String name) {
@@ -17,7 +16,6 @@ public class WasRun extends TestCase {
 
 	public void setUp() {
 		this.wasRun = false;
-		this.wasSetUp = true;
 		this.log= "setUp ";
 	}
 
