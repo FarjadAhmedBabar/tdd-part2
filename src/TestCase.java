@@ -9,10 +9,12 @@ public class TestCase {
 
 	public void run() throws Exception {
 		try {
+			setUp();
 			Method method = this.getClass().getMethod(name, null);
 			method.invoke(this, null);
 		} catch (Exception e) {
 			throw e;
 		}
 	}
+	public void setUp(){}
 }

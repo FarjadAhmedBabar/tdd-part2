@@ -2,6 +2,7 @@ import java.lang.reflect.Method;
 
 public class WasRun extends TestCase {
 	public boolean wasRun;
+	public boolean wasSetUp;
 
 	public WasRun(String name) {
 		super(name);
@@ -12,5 +13,9 @@ public class WasRun extends TestCase {
 		this.wasRun = true;
 	}
 
-	
+	public void setUp() {
+		this.wasRun = false;
+		this.wasSetUp = true;
+	}
+
 }
