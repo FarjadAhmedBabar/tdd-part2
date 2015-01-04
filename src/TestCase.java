@@ -7,7 +7,7 @@ public class TestCase {
 		this.name = name;
 	}
 
-	public void run() throws Exception {
+	public TestResult run() throws Exception {
 		try {
 			setUp();
 			Method method = this.getClass().getMethod(name, null);
@@ -16,6 +16,7 @@ public class TestCase {
 		} catch (Exception e) {
 			throw e;
 		}
+		return new TestResult();
 	}
 	public void tearDown() {
 		

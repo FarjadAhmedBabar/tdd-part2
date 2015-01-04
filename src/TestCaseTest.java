@@ -16,10 +16,10 @@ public class TestCaseTest extends TestCase {
 			throw e;
 		}
 	}
-	/*public void testResult()
+	public void testResult() throws Exception
 	{
 		WasRun test= new WasRun("testMethod");
-		result= test.run();
-		assert("1 run, 0 failed" == result.summary());
-	}*/
+		TestResult result= test.run();
+		assert ("1 run, 0 failed".equalsIgnoreCase(result.summary()));
+	}
 }
