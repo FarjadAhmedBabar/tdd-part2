@@ -12,9 +12,14 @@ public class TestCase {
 			setUp();
 			Method method = this.getClass().getMethod(name, null);
 			method.invoke(this, null);
+			tearDown();
 		} catch (Exception e) {
 			throw e;
 		}
 	}
+	public void tearDown() {
+		
+	}
+
 	public void setUp(){}
 }
